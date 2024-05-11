@@ -1,0 +1,66 @@
+.recipe {
+    background-color: lightblue; /* firebrick */
+    text-align: center;
+    
+    font-family: Arial, sans-serif;
+    padding: 20px;
+}
+
+.recipe-title {
+    margin-top: 0;
+}
+
+.omelette {
+    margin: 20px auto;
+    display: block;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.description {
+    max-width: 500px;
+    margin: 0 auto 20px;
+}
+
+.section-title {
+    margin-top: 30px;
+}
+
+.ingredients, .instructions {
+    list-style-type: none;
+    padding: 0;
+    text-align: left;
+}
+
+.ingredients li, .instructions li {
+    margin-bottom: 10px;
+}
+
+.ingredients li:before {
+    content: "•";
+    color: #ff5733; /* firebrick */
+    display: inline-block;
+    width: 1em;
+    margin-left: -1em;
+}
+
+.instructions li:before {
+    content: counter(step);
+    counter-increment: step;
+    color: #ff5733; /* firebrick */
+    font-weight: bold;
+    display: inline-block;
+    width: 2em;
+    margin-left: -2em;
+}
+
+@media only screen and (min-width: 768px) {
+    .recipe {
+        padding: 40px;
+    }
+
+    .description {
+        max-width: 600px;
+    }
+}
+
